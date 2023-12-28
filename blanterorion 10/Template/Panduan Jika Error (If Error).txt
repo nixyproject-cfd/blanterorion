@@ -1,0 +1,25 @@
+INDONESIA :
+
+Jika error saat pemasangan, Anda bisa ikuti petunjuk berikut :
+
+1. Pasang Template Default Blogger Untuk Sementara
+   - Disarankan coba "Contempo" ada di bawah "Tema" di Blogger.
+
+2. Lalu silahkan coba pasang kembali templatenya.
+
+Selesai.
+
+=====================================================================
+
+ENGLISH :
+
+If the error during installation, you can follow the following instructions:
+
+1. Temporarily Install the Default Blogger Template
+    - It is recommended to try "Contempo" under "Themes" on Blogger.
+
+2. Then please try installing the template again.
+
+Finish.
+
+=====================================================================

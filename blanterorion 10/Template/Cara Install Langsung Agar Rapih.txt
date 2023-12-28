@@ -1,0 +1,51 @@
+Langkah-Langkah:
+
+1. Buka Blogger > Tema > Edit HTML
+2. Hapus semua kode template yang lama.
+3. Buka File "Blanter Orion Premium.xml" lalu paste ke dalam kolom edit HTML.
+4. Simpan Template (Icon Save).
+
+=====================================================================
+
+BUKA DAN LIHAT SEMUA ISI FOLDER : "Panduan dan Dokumentasi" dan "Documentation (Full).html" 
+Penting! Membaca Panduan Untuk kenyamanan dan kerapihan template.
+
+=====================================================================
+
+JANGAN LUPA UNTUK LIKE FANSPAGE : https://www.facebook.com/DuniaBlanter
+
+Rio Ilham Hadi | www.idblanter.com | www.blantertheme.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WWW.IDBLANTER.COM
