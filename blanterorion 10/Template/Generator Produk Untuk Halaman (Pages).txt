@@ -1,0 +1,109 @@
+<div id='all-input'>
+<center>
+<p>Sekarang menambahkan produk baru lebih mudah! (Orion v1.0)<p>
+</center>
+<br/>
+<div class='info-box'>
+<b>Informasi:</b><br/>
+1. Isi Formulir Sesuai dengan Kegunaan.<br/>
+2. Masukan URL/Link gambar yang sudah Anda upload di Blogger.<br/>
+3. Jika Klik Salah satu Tombol apapun, maka tidak bisa dikembalikan, kecuali halaman di reload.<br/>
+4. Pada formulir ini, gambar di batasi maksimal 5, dan Opsi select maksimal 4.<br/>
+5. Fitur "Variant" hanya untuk Mata Uang Rupiah.
+</div>
+<br/>
+
+<div class='input-field'>
+<h4><b>Judul Produk</b></h4>
+<input id='formtitle' placeholder='Judul Produk' value='' type='text'/>
+<br/><br/>
+</div>
+
+<div class='input-field'>
+<h4><b>Gambar Produk</b></h4>
+<input id='formgambar1' placeholder='URL Gambar Produk' value='' type='text'/>
+<br/>
+<input id='formgambar2' placeholder='URL Gambar Produk 2' value='' type='text'/>
+<div class='tambah-img'></div>
+<button id='tambah-gambar'>Tambahkan Gambar</button>
+<span class='info-box right'>Upload Gambar lalu ambil link gambar.</span>
+<br/><br/>
+</div>
+
+<div class='input-field'>
+<h4><b>Harga Produk</b></h4>
+<input id='formharga' placeholder='Harga Produk' value='' type='number'/>
+<button id='add-diskon'>Tambahkan Diskon</button><br/>
+</div>
+
+<div class='input-field'>
+<div id='diskon-wrap'>
+<h4><b>Jumlah Diskon %</b></h4>
+<input id='formdiskon' placeholder='Jumlah Diskon %' value='' type='number'/>
+<span class='info-box'>Contoh : "20". Harga setelah diskon otomatis.</span>
+</div>
+<br/>
+</div>
+
+<div class='input-field'>
+<h4><b>Opsi Select Produk 1</b></h4>
+<input id='form-opsi1' placeholder='Nama Opsi *Contoh: Varian Warna' value='' type='text'/>
+<br/>
+<input id='form-list-opsi1' placeholder='List Opsi 1' value='' type='text'/>
+<div class='tambah-opsi1'></div>
+<button id='add-list1'>Tambahkan List</button><br/><br/>
+</div>
+
+<div class='input-field'>
+<h4><b>Deskripsi Produk</b></h4>
+<textarea id='product-desc' placeholder='' maxlength='9000' row='1'></textarea>
+<div class='info-box'>
+Untuk menambah Enter atau baris baru : <code>&lt;br/&gt;</code><br/>
+Untuk menebalkan teks gunakan : <code>&lt;b&gt; teks &lt;/b&gt;</code><br/>
+Untuk memiringkan teks gunakan : <code>&lt;i&gt; teks &lt;/i&gt;</code><br/>
+Untuk menggunakan teks besar (heading) gunakan : <code>&lt;h3&gt; teks &lt;/h3&gt;</code>
+</div>
+</div>
+
+<center>
+<button id='request-code' class='buttonx'>Generate HTML</button>
+<button id='reset-html' class='buttonx redx'>Reset HTML</button>
+</center>
+<div id='default-save'></div>
+
+<div id='results'>
+<pre><code id='hasilx'>&lt;div class=&quot;kolom-gambar&quot;&gt;
+&lt;a href=&quot;-linkgambar1-&quot; title=&quot;-thisjudul-&quot;&gt;&lt;img src=&quot;-linkgambar1-&quot; alt=&quot;-thisjudul-&quot;/&gt;&lt;/a&gt;
+&lt;a href=&quot;-linkgambar2-&quot; title=&quot;-thisjudul-&quot;&gt;&lt;img src=&quot;-linkgambar2-&quot; alt=&quot;-thisjudul-&quot;/&gt;&lt;/a&gt; -gambar3- -gambar4- -gambar5-
+&lt;/div&gt;
+&lt;div class=&quot;produk-kanan&quot;&gt;
+&lt;div class=&quot;status-produk&quot;&gt;Promo&lt;/div&gt;
+
+&lt;div class=&quot;harga-produk&quot;&gt;-strikemuncul-&lt;br/&gt;
+&lt;span id=&quot;harga&quot;&gt;-hargadiskon-&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;select-data&quot; id=&quot;pilihan&quot;&gt;&lt;label&gt;-varian-&lt;/label&gt;
+&lt;ul&gt;&lt;li data-price=&quot;0&quot;&gt;-warna-&lt;/li&gt; -opsi11- -opsi12- -opsi13- &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;select-data input-field&quot;&gt;
+&lt;label&gt;Catatan&lt;/label&gt;
+&lt;textarea id=&quot;product-desc&quot; maxlength=&quot;90&quot; placeholder=&quot;Catatan&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;a href=&quot;javascript:void&quot; id=&quot;next_order&quot; title=&quot;Beli Sekarang&quot;&gt;&lt;i class=&quot;fab fa-whatsapp&quot;&gt;&lt;/i&gt; Beli Sekarang&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class='deskripsi-produk'&gt;
+&lt;h3&gt;Deskripsi Produk&lt;/h3&gt;
+-deskripsi-
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+
+<script>
+//<![CDATA[
+var get_result_html=document.getElementById("results").innerHTML;document.getElementById("default-save").innerHTML=get_result_html,$(document).on("click","#reset-html",function(){var e=document.getElementById("default-save").innerHTML;document.getElementById("results").innerHTML=e,$("#results").hide()});var formatter=new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",minimumFractionDigits:0});$(document).on("click","#tambah-gambar",function(){var e=$(this),a=(e.data("click_count")||0)+1;e.data("click_count",a);var r,t=$("#results code").text();1==a?(r=t.replace(/-gambar3-/g,'\n<a href="-linkgambar3-" title="-thisjudul-"><img src="-linkgambar3-" alt="-thisjudul-"/></a>'),$(".tambah-img").append('<input id="formgambar3" placeholder="URL Gambar Produk 3" value="" type="text"/>')):2==a?(r=t.replace(/-gambar4-/g,'\n<a href="-linkgambar4-" title="-thisjudul-"><img src="-linkgambar4-" alt="-thisjudul-"/></a>'),$(".tambah-img").append('<input id="formgambar4" placeholder="URL Gambar Produk 4" value="" type="text"/>')):3==a&&(r=t.replace(/-gambar5-/g,'\n<a href="-linkgambar5-" title="-thisjudul-"><img src="-linkgambar5-" alt="-thisjudul-"/></a>'),$(".tambah-img").append('<input id="formgambar5" placeholder="URL Gambar Produk 5" value="" type="text"/>')),$("#results code").text(r)}),$(document).on("click","#request-code",function(){var e=$("#results code").text(),a=$("#formtitle").val(),r=$("#formgambar1").val(),t=$("#formgambar2").val(),l=$("#formgambar3").val(),i=$("#formgambar4").val(),o=$("#formgambar5").val(),c=$("#form-opsi1").val(),n=$("#form-list-opsi1").val(),s=$("#form-list-opsi2").val(),p=$("#form-list-opsi3").val(),m=$("#form-list-opsi4").val(),g=document.getElementById("product-desc").value,d=$("#formharga").val(),u=$("#formdiskon").val();console.log(d),console.log(u);var h=Math.round(d*u/100),b=Math.round(d-h),k=e.replace(/-thisjudul-/g,a).replace(/-linkgambar1-/g,r).replace(/-linkgambar2-/g,t).replace(/-linkgambar3-/g,l).replace(/-linkgambar4-/g,i).replace(/-linkgambar5-/g,o).replace(/-gambar3-/g,"").replace(/-gambar4-/g,"").replace(/-gambar5-/g,"").replace(/-opsi11-/g,"").replace(/-opsi12-/g,"").replace(/-opsi13-/g,"").replace(/-opsi21-/g,"").replace(/-opsi22-/g,"").replace(/-opsi23-/g,"").replace(/-varian-/g,c).replace(/-warna-/g,n).replace(/-warna2-/g,s).replace(/-warna3-/g,p).replace(/-warna4-/g,m).replace(/-deskripsi-/g,g).replace(/-promo-/g,"").replace(/-terlaris-/g,"").replace(/-stokhabis-/g,"").replace(/-diskonmuncul-/g,"").replace(/-strikemuncul-/g,"").replace(/-hargaasli-/g,b).replace(/-hargarp-/g,formatter.format(d)).replace(/-diskon-/g,u).replace(/-hargadiskon-/g,formatter.format(b));$("#results code").text(k),$("#results").slideToggle("normal")}),$(document).on("click","#add-diskon",function(){var e=$("#results code").text();$(this).toggleClass("aktif"),$("#diskon-wrap").toggleClass("aktif");var a=e.replace(/-strikemuncul-/g,"\n<strike>-hargarp-</strike>");$("#results code").text(a)}),$(document).on("click","#add-list1",function(){var e=$(this),a=(e.data("click_count")||0)+1;e.data("click_count",a);var r,t=$("#results code").text();1==a?(r=t.replace(/-opsi11-/g,'\n<li data-price="0">-warna2-</li>'),$(".tambah-opsi1").append('<input id="form-list-opsi2" placeholder="List Opsi 2" value="" type="text"/>')):2==a?(r=t.replace(/-opsi12-/g,'\n<li data-price="0">-warna3-</li>'),$(".tambah-opsi1").append('<input id="form-list-opsi3" placeholder="List Opsi 3" value="" type="text"/>')):3==a&&(r=t.replace(/-opsi13-/g,'\n<li data-price="0">-warna4-</li>'),$(".tambah-opsi1").append('<input id="form-list-opsi4" placeholder="List Opsi 4" value="" type="text"/>')),$("#results code").text(r)}),$('i[rel="pre"]').replaceWith(function(){return $("<pre><code>"+$(this).html()+"</code></pre>")});for(var pres=document.querySelectorAll("pre,kbd,blockquote"),i=0;i<pres.length;i++)pres[i].addEventListener("dblclick",function(){var e=getSelection(),a=document.createRange();a.selectNodeContents(this),e.removeAllRanges(),e.addRange(a)},!1);
+//]]>
+</script>
+<style>
+#default-save,#comments,#results,#diskon-wrap{display:none}#diskon-wrap.aktif{display:block}.post-body button#reset-html{background:#ea4335}#product-desc{height:200px}.info-box{padding:20px;margin:20px 0;border-left:5px solid #eee;border-radius:8px;display:inline-block}span.info-box.right{padding:5px;background:#eee;float:right;font-size:13px}.tambah-img input,.tambah-opsi1 input{margin:15px 0}.darkmode .input-field input,.darkmode .input-field textarea{background:#222;border-color:#444;color:#fff;width:98%}.darkmode span.info-box.right{background:#222;color:#eee}.input-field input,.input-field textarea{background:#f4f5f9}
+</style>
