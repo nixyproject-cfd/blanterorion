@@ -1,0 +1,31 @@
+How To Use This Template :
+
+1) Log in to your Blogger dashboard and go to Themes > Edit HTML.
+
+2) Please back up your old template in case you decide to use it again.
+   To do this, click on the "download full template" link and save the file.
+
+3) Then, browse the location of XML template that you've just downloaded
+   and press "upload".
+
+If Error, Read "IF ERROR.txt"
+
+Thank you.
+
+Regards,
+Rio Ilham Hadi | www.idblanter.com
+
+======================================================
+
+Design By : Rhinokage Rio (Rio Ilham Hadi)
+URL       : https://www.idblanter.com
+URL       : https://www.blantertheme.com
+URL       : https://www.blantermedia.com
+
+=======================================================
+
+Type: Premium Version
+Version: v1.0.0 (16 May 2022)
+Build Number: 160522
+
+=======================================================
